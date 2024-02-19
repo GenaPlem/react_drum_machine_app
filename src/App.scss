@@ -5,6 +5,21 @@ $keys-color: #FF901B;
 $pad-color: #FC5E01;
 $addition-color: #3C4F76;
 
+@mixin button_shadow($color) {
+    background-color: $color;
+    box-shadow: 0 0 10px $color,
+    0 0 20px $color,
+    0 0 40px $color,
+    0 0 80px $color;
+
+    &:hover {
+        box-shadow: 0 0 20px $color,
+        0 0 30px $color,
+        0 0 50px $color,
+        0 0 80px $color;
+    }
+}
+
 * {
     box-sizing: border-box;
 }
@@ -29,7 +44,6 @@ body {
     padding: 2rem;
     border-radius: 1rem;
     border: 1px solid rgba(255, 255, 255, 0.2);
-    /* https://smoothshadows.com/#djEsMSwxMCwwLjEsMTAwLDM0LDI0LCNmZmZmZmYsIzAwMDAwMCwjMDAwMDAwLDM%3D */
     box-shadow: 0 0 5px #fff,
     0 0 10px #fff;
 
@@ -42,48 +56,15 @@ body {
         }
 
         &-drums {
-            background-color: $drums-color;
-            box-shadow: 0 0 10px $drums-color,
-            0 0 20px $drums-color,
-            0 0 40px $drums-color,
-            0 0 80px $drums-color;
-
-            &:hover {
-                box-shadow: 0 0 20px $drums-color,
-                0 0 30px $drums-color,
-                0 0 50px $drums-color,
-                0 0 80px $drums-color;
-            }
+            @include button_shadow($drums-color)
         }
 
         &-keys {
-            background-color: $keys-color;
-            box-shadow: 0 0 10px $keys-color,
-            0 0 20px $keys-color,
-            0 0 40px $keys-color,
-            0 0 80px $keys-color;
-
-            &:hover {
-                box-shadow: 0 0 20px $keys-color,
-                0 0 30px $keys-color,
-                0 0 50px $keys-color,
-                0 0 80px $keys-color;
-            }
+            @include button_shadow($keys-color)
         }
 
         &-pad {
-            background-color: $pad-color;
-            box-shadow: 0 0 10px $pad-color,
-            0 0 20px $pad-color,
-            0 0 40px $pad-color,
-            0 0 80px $pad-color;
-
-            &:hover {
-                box-shadow: 0 0 20px $pad-color,
-                0 0 30px $pad-color,
-                0 0 50px $pad-color,
-                0 0 80px $pad-color;
-            }
+            @include button_shadow($pad-color)
         }
     }
 }
