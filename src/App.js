@@ -7,7 +7,7 @@ function App() {
     const handleKeyDown = (e) => {
         let soundButton = document.getElementById(e.key.toUpperCase())
         if (soundButton !== null) {
-            soundButton.parentElement.classList.add('active')
+            soundButton.parentElement.classList.add('active');
             soundButton.play();
         }
     }
@@ -15,8 +15,7 @@ function App() {
     const handleKeyUp = (e) => {
         let soundButton = document.getElementById(e.key.toUpperCase())
         if (soundButton !== null) {
-
-            soundButton.parentElement.classList.remove('active')
+            soundButton.parentElement.classList.remove('active');
         }
     }
 

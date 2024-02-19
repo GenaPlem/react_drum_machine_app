@@ -2,7 +2,7 @@ export const SoundButton = ({btn, type, sound}) => {
     // Btn(KeyboardKey), Key, Type, Sound
 
     const playSound = (e) => {
-        e.target.children[1].play()
+        e.target.children[1].play();
     }
 
     return (
