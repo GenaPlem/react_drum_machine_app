@@ -7,16 +7,26 @@ function App() {
     const handleKeyDown = (e) => {
         let soundButton = document.getElementById(e.key.toUpperCase())
         if (soundButton !== null) {
+            soundButton.parentElement.classList.add('active')
+            soundButton.play();
+        }
+    }
 
-            soundButton.play()
+    const handleKeyUp = (e) => {
+        let soundButton = document.getElementById(e.key.toUpperCase())
+        if (soundButton !== null) {
+
+            soundButton.parentElement.classList.remove('active')
         }
     }
 
     useEffect(() => {
-        document.addEventListener('keydown', handleKeyDown)
+        document.addEventListener('keydown', handleKeyDown);
+        document.addEventListener('keyup', handleKeyUp);
 
         return () => {
             document.removeEventListener('keydown', handleKeyDown);
+            document.addEventListener('keyup', handleKeyUp);
         };
     }, [])
 
