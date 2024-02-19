@@ -5,8 +5,10 @@ import {useEffect} from "react";
 function App() {
 
     const handleKeyDown = (e) => {
-        if (document.getElementById(e.key.toUpperCase()) !== null) {
-            document.getElementById(e.key.toUpperCase()).play()
+        let soundButton = document.getElementById(e.key.toUpperCase())
+        if (soundButton !== null) {
+
+            soundButton.play()
         }
     }
 
