@@ -67,4 +67,10 @@ body {
             @include button_shadow($pad-color)
         }
     }
+
+    &__key {
+        display: block;
+        color: $bg-color;
+        padding: 1rem;
+    }
 }
