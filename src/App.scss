@@ -69,8 +69,10 @@ body {
     }
 
     &__key {
+        pointer-events: none;
         display: block;
         color: $bg-color;
+        opacity: 0.4;
         padding: 1rem;
     }
 }
