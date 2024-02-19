@@ -3,6 +3,7 @@ export const SoundButton = ({key, type, sound}) => {
 
     return (
         <div className={`drumpad__button-${type}`}>
+            <span>{key}</span>
             <audio className="clip" id={key} src={sound}></audio>
         </div>
     )
