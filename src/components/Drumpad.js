@@ -6,7 +6,7 @@ export const Drumpad = () => {
         <div className="drumpad">
 
             {drumSounds.map(drumSound => <SoundButton btn={drumSound.btn} type={drumSound.type}
-                                                      sound={drumSound.audio}/>)}
+                                                      sound={drumSound.audio} key={drumSound.id}/>)}
 
         </div>
     )
